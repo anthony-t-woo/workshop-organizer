@@ -1,7 +1,7 @@
 /* Imports */
 // this will check if we have a user and set signout link if it exists
 import { getWorkshops, checkAuth, addParticipant } from '../fetch-utils.js';
-import { renderWorkshop } from '../render-utils.js';
+import { renderWorkshopOption } from '../render-utils.js';
 
 checkAuth();
 /* Get DOM Elements */
@@ -14,7 +14,7 @@ window.addEventListener('load', async () => {
     workshops = await getWorkshops();
     console.log(workshops);
     workshops.forEach((workshop) => {
-        let response = renderWorkshop(workshop);
+        let response = renderWorkshopOption(workshop);
         select.append(response);
     });
 });
