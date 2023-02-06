@@ -18,6 +18,7 @@ window.addEventListener('load', async () => {
 
 /* Display Functions */
 function displayWorkshops() {
+    workshopsEl.textContent = '';
     workshops.forEach((workshop) => {
         let response = renderWorkshop(workshop);
         workshopsEl.append(response);

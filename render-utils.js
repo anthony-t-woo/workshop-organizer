@@ -1,3 +1,5 @@
+import { deleteParticipant } from './fetch-utils.js';
+
 export function renderWorkshopOption(data) {
     const option = document.createElement('option');
     option.textContent = data.name;
@@ -8,11 +10,25 @@ export function renderWorkshopOption(data) {
 export function renderWorkshop(data) {
     const div = document.createElement('div');
     const h3 = document.createElement('h2');
+    const participantsDiv = document.createElement('div');
 
     div.classList.add('workshop');
+    participantsDiv.classList.add('participants');
 
     h3.textContent = data.name;
+    let participantsData = data.participants;
 
-    div.append(h3);
+    participantsData.forEach((participant) => {
+        const participantEl = document.createElement('p');
+        participantEl.textContent = participant.name;
+        participantEl.classList.add('participant');
+        participantsDiv.append(participantEl);
+        participantEl.addEventListener('click', async () => {
+            await deleteParticipant(participant.id);
+            location.reload();
+        });
+    });
+
+    div.append(h3, participantsDiv);
     return div;
 }

@@ -69,3 +69,33 @@ main {
 .hidden {
     display: none;
 }
+.workshop {
+    width: 200px;
+    margin: 10px;
+    border: solid 1px black;
+    padding: 10px;
+}
+
+.workshops-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.participants {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.participant {
+    margin: 5px;
+    padding: 5px;
+    border: 1px dashed salmon;
+}
+
+.participant:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}

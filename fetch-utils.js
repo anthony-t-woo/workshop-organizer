@@ -43,3 +43,7 @@ export async function getWorkshops() {
 export async function addParticipant(name, workshop_id) {
     await client.from('participants').insert([{ name, workshop_id }]);
 }
+
+export async function deleteParticipant(id) {
+    await client.from('participants').delete().eq('id', id);
+}
