@@ -1,3 +1,17 @@
+# Wireframe
+
+![wireframe for workshop organizer app](./assets/IMG_C8319376589D-1.jpeg)
+
+# Data Model
+
+## Workshops Table
+
+![workshop data model](./assets/workshops-data-model.png)
+
+## Participants Table
+
+![participants data model](./assets/participants-data-model.png)
+
 # Slices
 
 ## Display Workshops
