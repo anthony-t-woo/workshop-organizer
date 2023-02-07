@@ -32,3 +32,12 @@ export function renderWorkshop(data) {
     div.append(h3, participantsDiv);
     return div;
 }
+
+export function renderPreview(data) {
+    const div = document.createElement('div');
+    const p = document.createElement('p');
+
+    p.textContent = `${data.name} is signed up for ${data.workshop}`;
+    div.append(p);
+    return div;
+}

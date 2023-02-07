@@ -31,7 +31,14 @@
         <!-- add link for page specific css -->
     </head>
     <body>
-        <header></header>
+        <header class="page-header">
+            <img class="logo" src="../assets/html_css_js.png" alt="logo" />
+            <p class="title">Workshop Organizer App</p>
+            <nav>
+                <a href="../">Home</a>
+                <a id="sign-out-link" href="../auth">Sign Out</a>
+            </nav>
+        </header>
     </body>
     <main>
         <form class="add-participant-form">
@@ -45,5 +52,7 @@
             </label>
             <button>Add New Participant</button>
         </form>
+        <h3>Recently Added</h3>
+        <div class="added-participants"></div>
     </main>
 </html>
